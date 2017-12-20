@@ -8,6 +8,13 @@ class Clock extends Item {
   Clock(float x, float y) {
     super(x, y);
   }
+  
+  void checkCollision(){
+  if (isAlive == true && isHit(x, y, w, h, player.x, player.y, player.w, player.h)) {
+      addTime(CLOCK_BONUS_SECONDS);
+      isAlive = false;
+    }
+  }
 
   void display() {
     if (isAlive == true) {
