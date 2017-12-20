@@ -10,7 +10,12 @@ class Clock extends Item {
   }
   
   void checkCollision(){
-  if (isAlive == true && isHit(x, y, w, h, player.x, player.y, player.w, player.h)) {
+  if (isHit(x, y, w, h, player.x, player.y, player.w, player.h)) {
+    if (isAlive == true) {
+      addTime(CLOCK_BONUS_SECONDS);
+      isAlive = false;
+      }
+    })
       addTime(CLOCK_BONUS_SECONDS);
       isAlive = false;
     }
