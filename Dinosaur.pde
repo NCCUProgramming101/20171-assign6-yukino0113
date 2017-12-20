@@ -27,7 +27,7 @@ class Dinosaur extends Enemy {
 
     x += speed/2;
 
-    if (player.y - y < 59 && y - player.y <0) {
+    if (player.y - y < 59 && y - player.y =<0) {
       if (direction == RIGHT) {
         if (player.x > x) {
           speed = SPEED*TRIGGERED_SPEED_MULTIPLIER;
