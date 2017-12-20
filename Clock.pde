@@ -4,11 +4,11 @@ class Clock extends Item {
   Clock() {
     super("clock");
   }
-
-  Clock(float x, float y) {
-    super(x, y);
+  void display() {
+    if (isAlive == true) {
+      image(clock, x, y);
+    }
   }
-  
   void checkCollision(Player player){
   if (isHit(x, y, w, h, player.x, player.y, player.w, player.h)) {
     if (isAlive == true) {
@@ -17,10 +17,7 @@ class Clock extends Item {
       }
     }
   }
-
-  void display() {
-    if (isAlive == true) {
-      image(clock, x, y);
-    }
+   Clock(float x, float y) {
+    super(x, y);
   }
 }
