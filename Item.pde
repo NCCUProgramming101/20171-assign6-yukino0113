@@ -5,10 +5,10 @@ class Item {
   float h = SOIL_SIZE;
   PImage img;
   
-    Item(String filename){
-    img = loadImage("img/" + filename + ".png");
-    }
-
+  Item(String filename){
+  img = loadImage("img/" + filename + ".png");
+  }
+  
   void display() {
   }
   void checkCollision(Player player) {
