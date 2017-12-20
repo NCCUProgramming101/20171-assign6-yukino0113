@@ -75,6 +75,8 @@ class Robot extends Enemy {
         } else {
           laser.fire( x + 25, y + 37, player.x + 40, player.y + 40 ); 
           CD_Timer=0;
+        } else {
+          CD_Timer = 0;
         }
       }
       laser.update();
