@@ -146,19 +146,23 @@ void initGame() {
     float newY = SOIL_SIZE * ( i * 4 + floor(random(4)));
 
     switch(i) {
-    case 0: 
-    case 1: 
+    case 0: case 1: 
       enemies[i] = new Soldier(newX, newY);
-    case 2: 
-    case 3: // Requirement 4: Create new Dinosaur in row 9 - 16
-    case 4: 
-    case 5: // Requirement 5: Create new Robot in row 17 - 25
+      break;
+    case 2: case 3: 
+    // Requirement 4: Create new Dinosaur in row 9 - 16
+      enemies[i] = new Dinosaur(newX, newY);
+      break;
+    case 4: case 5: // Requirement 5: Create new Robot in row 17 - 25
+      enemies[i] = new Robot(newX, newY);
+      break;
     }
   }
 
   // Initialize items and their position
 
   items = new Item[6];
+  itemCounter = 0;
 
   for (int i = 0; i < items.length; i++) {
     float newX = SOIL_SIZE * floor(random(SOIL_COL_COUNT));
