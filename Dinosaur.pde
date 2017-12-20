@@ -45,10 +45,12 @@ class Dinosaur extends Enemy {
       }
     } else {
       if (direction == RIGHT) {
+        speed = SPEED;
         if (x >= width-80) {
           speed = -SPEED;
         }
       } else {
+        speed = -SPEED;
         if (x <= 0) {
           speed = SPEED;
         }
@@ -62,11 +64,5 @@ class Dinosaur extends Enemy {
     super(x, y);
   }
 
-  // HINT: Player Detection in update()
-  /*
-	float currentSpeed = speed
-   	If player is on the same row with me AND (it's on my right side when I'm going right OR on my left side when I'm going left){
-   		currentSpeed *= TRIGGERED_SPEED_MULTIPLIER
-   	}
-   	*/
+  
 }
