@@ -25,7 +25,7 @@ class Dinosaur extends Enemy {
 
   void update() {
 
-    x += speed;
+    x += speed/2;
 
     if (player.y == y) {
       if (direction == RIGHT) {
