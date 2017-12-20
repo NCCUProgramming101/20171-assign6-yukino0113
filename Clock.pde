@@ -14,10 +14,8 @@ class Clock extends Item {
     if (isAlive == true) {
       addTime(CLOCK_BONUS_SECONDS);
       isAlive = false;
+      
       }
-    })
-      addTime(CLOCK_BONUS_SECONDS);
-      isAlive = false;
     }
   }
 
