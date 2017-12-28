@@ -70,11 +70,19 @@ class Robot extends Enemy {
     if (abs(player.y - y) <= 2*SOIL_SIZE) {
       if (CD_Timer >= CD) {
         if (direction == RIGHT) {
+          if (speed = 0){
           laser.fire( x + 55, y + 37, player.x + 40, player.y + 40 );
           CD_Timer=0;
+          }else{
+          CD_Timer=0;
+          }
         } else if (direction == LEFT) {
+          if(speed = 0){
           laser.fire( x + 25, y + 37, player.x + 40, player.y + 40 ); 
           CD_Timer=0;
+          }else{
+          CD_Timer = 0;
+          }
         }
       }
       laser.update();
